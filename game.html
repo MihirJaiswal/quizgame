@@ -1,0 +1,78 @@
+\<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="apple-touch-icon" sizes="180x180" href="images/android-chrome-192x192.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>CyberSphere | Quiz</title>
+  <link rel="stylesheet" href="css/app.css" />
+  <link rel="stylesheet" href="css/game.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div id="loader"></div>
+    <div id="game" class="justify-center flex-column hidden">
+      <div id="hud">
+        <div id="hud-item">
+          <h2 id="progressText" class="hud-prefix">
+            Question
+          </h2>
+          <div id="progressBar">
+            <div id="progressBarFull"></div>
+          </div>
+        </div>
+        <div id="hud-item">
+          <h2 class="hud-prefix">
+            Score
+          </h2>
+          <h1 class="hud-main-text" id="score">
+            0
+          </h1>
+        </div>
+      </div>
+      <h2 id="question"></h2>
+      <div class="choice-container">
+        <p class="choice-prefix">A</p>
+        <p class="choice-text" data-number="1"></p>
+      </div>
+      <div class="choice-container">
+        <p class="choice-prefix">B</p>
+        <p class="choice-text" data-number="2"></p>
+      </div>
+      <div class="choice-container">
+        <p class="choice-prefix">C</p>
+        <p class="choice-text" data-number="3"></p>
+      </div>
+      <div class="choice-container">
+        <p class="choice-prefix">D</p>
+        <p class="choice-text" data-number="4"></p>
+      </div>
+    </div>
+  </div>
+  <script src="js/game.js"></script>
+  <script>
+    var setVanta = () => {
+      if (window.VANTA) window.VANTA.WAVES({
+        el: "body",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        scale: 1.00,
+        scaleMobile: 1.00,
+        color: 0x160639,
+        zoom : 0.75,
+        shininess : 10,
+      })
+    }
+    setVanta();
+  </script>
+</body>
+</html>

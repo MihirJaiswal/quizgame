@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="apple-touch-icon" sizes="180x180" href="images/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.rings.min.js"></script>
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>CyberSphere Quiz</title>
+  <link rel="stylesheet" href="css/app.css" />
+</head>
+
+<body class="bg-gray-950">
+  
+  <div id="container" class="h-screen flex">
+    <div class="m-8"> 
+      <img src="images/logo.png" alt="" class="w-40 h-40 fixed top-0 left-0">
+    </div>
+    <div id="home" class="flex-center flex-column p-10">
+      <h1 class="text-7xl mb-12 text-white font-bold font-orbitron text-center uppercase tracking-widest ">Quiz for Geeks</h1>
+      <a class="button mb-4 border border-1 border-white" href="game.html">Play</a>
+      <a class="button border border-1 border-white" href="highscores.html">High Scores</a>
+    </div>
+  </div>
+
+  <script>
+    VANTA.RINGS({
+      el: "#container", 
+      backgroundColor: 0x0,
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      scale: 1.00,
+      scaleMobile: 1.00
+    })
+  </script>
+</body>
+</html>

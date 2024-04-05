@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="apple-touch-icon" sizes="180x180" href="images/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Congrats!!</title>
+  <link rel="stylesheet" href="css/app.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"></script>
+</head>
+<body>
+  <img src="images/logo.png" alt="LOGO">
+  <div class="container">
+    <div id="end" class="flex-center flex-column">
+      <h3>Score</h3>
+      <h1 id="finalScore"></h1>
+      <form>
+        <input
+          type="text"
+          name="username"
+          id="username"
+          placeholder="username"
+        />
+        <button
+          type="submit"
+          class="button"
+          id="saveScoreBtn"
+          onclick="saveHighScore(event)"
+          disabled
+        >
+          Save
+        </button>
+      </form>
+      <div class="flex-center gap-10">
+        <a class="button" href="game.html">Play Again</a>
+        <a class="button" href="index.html">Go Home</a>
+      </div>
+    </div>
+  </div>
+  <script src="js/end.js"></script>
+  <script>
+    var setVanta = () => {
+      if (window.VANTA) window.VANTA.WAVES({
+        el: ".s-page-1 .s-section-1 .s-section",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        scale: 1.00,
+        scaleMobile: 1.00
+      });
+    }
+    _strk.push(function() {
+      setVanta()
+      window.edit_page.Event.subscribe( "Page.beforeNewOneFadeIn", setVanta )
+    });
+  </script>
+</body>
+</html>
